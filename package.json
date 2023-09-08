@@ -19,12 +19,16 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "prepare": "husky install",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down"
   },
   "dependencies": {
+    "@nestjs/bullmq": "^10.0.1",
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
+    "bullmq": "^4.9.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.2.0"
   },
